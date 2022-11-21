@@ -1,6 +1,7 @@
 import React from "react";
 import './Input.css';
 
+
 export default class Input extends React.Component {
     render() {
         const { id, name, type, placeholder} = this.props;
