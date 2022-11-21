@@ -1,0 +1,29 @@
+.App-container {
+    display: flex;
+    padding: 20px 40px;
+    gap: 20px;
+
+
+}
+
+.App-card {
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 1px 10px 4px #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.App-cardContainer {
+    padding: 10px;
+}
+
+.App-cardImg {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
