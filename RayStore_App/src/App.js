@@ -34,7 +34,6 @@ function App() {
 
         }
       </div>
-      <Button>Купить</Button>
       <div className="App-newsletter">
         <h3> Подписаться на новости компании</h3>
         <Input />
@@ -46,5 +45,3 @@ function App() {
 }
 
 export default App;
-
-
