@@ -14,6 +14,7 @@ export default function Header() {
                     <li>Контакты</li>
                     <li>Регистрация</li>
                     <li>Вход</li>
+                    <li>Корзина<img></img></li>
                 </ul>
             </div>
             <div className="presentation"></div>
