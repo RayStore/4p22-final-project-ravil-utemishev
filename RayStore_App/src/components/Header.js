@@ -6,7 +6,7 @@ export default function Header() {
             <div className="header__logotype">
 
                 <span className="logo">Ray Autoparts
-                    <img src="./public/logo_2" alt="logotype"></img>
+                    <img src="./public/logo_3" alt="logotype"></img>
                 </span>
                 <ul className="navigate">
                     <li>О нас</li>
