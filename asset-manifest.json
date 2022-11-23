@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/4p22-final-project-ravil-utemishev/gh-pages/static/css/main.b7d8ac6b.css",
-    "main.js": "/4p22-final-project-ravil-utemishev/gh-pages/static/js/main.3d5b8abd.js",
-    "static/media/Autoparts.png": "/4p22-final-project-ravil-utemishev/gh-pages/static/media/Autoparts.98e7ad89e888632e8c5c.png",
-    "static/media/Autorepair.jpg": "/4p22-final-project-ravil-utemishev/gh-pages/static/media/Autorepair.eb50b61d7c8def240fd6.jpg",
-    "index.html": "/4p22-final-project-ravil-utemishev/gh-pages/index.html",
-    "main.b7d8ac6b.css.map": "/4p22-final-project-ravil-utemishev/gh-pages/static/css/main.b7d8ac6b.css.map",
-    "main.3d5b8abd.js.map": "/4p22-final-project-ravil-utemishev/gh-pages/static/js/main.3d5b8abd.js.map"
+    "main.css": "/4p22-final-project-ravil-utemishev/static/css/main.71a9622c.css",
+    "main.js": "/4p22-final-project-ravil-utemishev/static/js/main.04df045c.js",
+    "static/media/Autoparts.png": "/4p22-final-project-ravil-utemishev/static/media/Autoparts.98e7ad89e888632e8c5c.png",
+    "static/media/Autorepair.jpg": "/4p22-final-project-ravil-utemishev/static/media/Autorepair.eb50b61d7c8def240fd6.jpg",
+    "index.html": "/4p22-final-project-ravil-utemishev/index.html",
+    "main.71a9622c.css.map": "/4p22-final-project-ravil-utemishev/static/css/main.71a9622c.css.map",
+    "main.04df045c.js.map": "/4p22-final-project-ravil-utemishev/static/js/main.04df045c.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7d8ac6b.css",
-    "static/js/main.3d5b8abd.js"
+    "static/css/main.71a9622c.css",
+    "static/js/main.04df045c.js"
   ]
 }
