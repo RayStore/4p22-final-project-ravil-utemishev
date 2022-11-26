@@ -1,9 +1,9 @@
-import './Button.css'
+// import './Button.css'
 
-function Button(props) {
-    return (
-        <button className="CommonButton">{ props.text }</button> 
-    )
-}
+// function Button(props) {
+//     return (
+//         <button className="CommonButton">{ props.text }</button> 
+//     )
+// }
 
-export default Button;
+// export default Button;

@@ -1,0 +1,6 @@
+.Index-container {
+    display: flex;
+    padding: 20px 40px;
+    gap: 130px;
+    flex-wrap: wrap;
+}

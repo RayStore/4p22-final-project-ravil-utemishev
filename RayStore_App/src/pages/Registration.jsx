@@ -1,85 +1,127 @@
-import 
+import './RegForm.scss';
+import { Link } from "react-router-dom";
+import React from "react";
 
-const inputEmail = document.getElementById('email');
-const inputPassword = document.getElementById('password');
-const inputConfirm = document.getElementById('password-confirm');
-const emailRequired = document.getElementById('email-requred_id');
-const emailError = document.getElementById('email-error');
-const passwordRequired = document.getElementById('password-reqired_id');
-const lengthPassword = document.getElementById('password-length');
-const passwordConfirm = document.getElementById('password-confirm_id');
+function Registration() {
 
-const button = document.querySelector('.registr-box__button');
+    const [email, setEmail] = React.useState('');
+    const [emailSelect, setEmailSelect] = React.useState(false);
+    const [emailError, setEmailError] = React.useState('Поле обязательно для заполнения')
+    const [password, setPassword] = React.useState('');
+    const [passwordSelect, setPasswordSelect] = React.useState(false);
+    const [passwordError, setPasswordError] = React.useState('Поле обязательно для заполнения')
+    const [confirm, setConfirm] = React.useState('');
+    const [confirmSelect, setConfirmSelect] = React.useState(false);
+    const [confirmError, setConfirmError] = React.useState('Поле обязательно для заполнения')
 
-function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-button.addEventListener('click', (event) => {
-    emailRequired.style.display = 'none';
-    emailError.style.display = 'none';
-    passwordRequired.style.display = 'none';
-    lengthPassword.style.display = 'none';
-    passwordConfirm.style.display = 'none';
-
-    let emailBool = false;
-    let passwordBool = false;
-    let passconfirmBool = false;
-
-    if (inputEmail.value === '' || validateEmail(inputEmail.value) === false) {
-        inputEmail.style.border = "2px solid red";
-        if (inputEmail.value === '') {
-            emailRequired.style.display = 'flex';
-        } else if (validateEmail(inputEmail.value) === false) {
-            emailError.style.display = 'flex';
+    const emailHandler = (event) => {
+        setEmail(event.target.value)
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!re.test(String(event.target.value).toLowerCase())) {
+            setEmailError('Email введён некорректно')
+            if (!event.target.value) {
+                setEmailError('Поле обязательно для заполнения')
+            }
+        } else {
+            setEmailError('')
         }
-
-        emailBool = false;
-    } else {
-        inputEmail.style.border = "2px solid #787878";
-        emailRequired.style.display = 'none';
-        emailError.style.display = 'none';
-        emailBool = true;
     }
 
-    if (inputPassword.value === '' || inputPassword.value.length < 8) {
-        inputPassword.style.border = "2px solid red";
-        if (inputPassword.value === '') {
-            passwordRequired.style.display = 'flex';
-        } else if (inputPassword.value.length < 8) {
-            lengthPassword.style.display = 'flex';
-
+    const passwordHandler = (event) => {
+        setPassword(event.target.value)
+        if (event.target.value.length < 8) {
+            setPasswordError('Пароль должен содержать не менее 8 символов')
+            if (!event.target.value) {
+                setPasswordError('Поле обязательно для заполнения')
+            }
+        } else {
+            setPasswordError('')
         }
-
-        passwordBool = false;
-    } else {
-        inputPassword.style.border = "2px solid #787878";
-        passwordRequired.style.display = 'none';
-        lengthPassword.style.display = 'none';
-        passwordBool = true;
     }
 
-    if (inputConfirm.value === '' || inputConfirm.value !== inputPassword.value) {
-        inputConfirm.style.border = "2px solid red";
-        if (inputConfirm.value === '') {
-            passwordConfirm.style.display = 'flex';
-        } else if (inputConfirm.value !== inputPassword.value) {
-            passwordConfirm.style.display = 'flex';
-
+    const confirmHandler = (event) => {
+        setConfirm(event.target.value)
+        if (event.target.value !== password) {
+            setConfirmError('Пароли не совпадают')
+            if (!event.target.value) {
+                setConfirmError('Поле обязательно для заполнения')
+            }
+        } else {
+            setConfirmError('')
         }
-
-        passconfirmBool = false;
-    } else {
-        inputConfirm.style.border = "2px solid #787878";
-        passwordConfirm.style.display = 'none';
-        passconfirmBool = true;
     }
 
-    if (emailBool && passwordBool && passconfirmBool) {
-        console.log(`Email:\t${inputEmail.value}\nPassword:\t${inputPassword.value}\nPassword-Confirm:\t${inputConfirm.value}`)
+    const blurHandler = (event) => {
+        switch (event.target.name) {
+            case 'email':
+                setEmailSelect(true)
+                break;
+        
+            case 'password':
+                setPasswordSelect(true)
+                break;
+
+            case 'confirm':
+                setConfirmSelect(true) 
+                break;
+        }
     }
 
-    event.preventDefault();
+    return(
+        <div className="window-auth">
+            <div className="window-auth__container">
+                <h1>
+                    <Link to="/">
+                        <img className="back-button" width={20} height={20} src="./img/left.png" alt="back" />
+                    </Link>
+                    Регистрация
+                </h1>
+                <div className="window-auth__email">
+                    {emailSelect && emailError ? (emailSelect && emailError) && <label htmlFor="input_email" style={{color:'rgb(255, 97, 58)'}}>{emailError}</label> : <label htmlFor="input_email">*Email</label>}
+                    <input onChange={event => emailHandler(event)} value={email} onBlur={event => blurHandler(event)} type="email" name="email" id="input_email" required placeholder="Введите email" autoComplete='off'/>
+                </div>
+                <div className="window-auth__pass">
+                    {passwordSelect && passwordError ? (passwordSelect && passwordError) && <label htmlFor="input_password" style={{color:'rgb(255, 97, 58)'}}>{passwordError}</label> : <label htmlFor="input_password">*Пароль</label>}
+                    <input onChange={event => passwordHandler(event)} value={password} onBlur={event => blurHandler(event)} type="password" name="password" id="input_password" required placeholder="Введите пароль" autoComplete='off'/>
+                </div>
+                <div className="window-auth__confirm_pass">
+                    {confirmSelect && confirmError ? (confirmSelect && confirmError) && <label htmlFor="confirm_password" style={{color:'rgb(255, 97, 58)'}}>{confirmError}</label> : <label htmlFor="confirm_password">*Подтверждение</label>}
+                    <input onChange={event => confirmHandler(event)} value={confirm} onBlur={event => blurHandler(event)} type="password" name="confirm" id="confirm_password" required placeholder="Подтвердите пароль" autoComplete='off'/>
+                </div>
+                <div className="window-auth__gender">
+                    <legend>Пол</legend>
+                    <div>
+                        <input type="radio" name="gender" value="male" id="male" checked/>
+                        <label htmlFor="male">Мужчина</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="female" id="female"/>
+                        <label htmlFor="female">Женщина</label>
+                    </div>
+                </div>
+                <div className="window-auth__resume">
+                    <label htmlFor="input_resume">О себе</label>
+                    <textarea name="about" id="input_resume" placeholder="Расскажите о себе..."></textarea>
+                </div>
+                <div className="window-auth__agree">
+                    <input id="checkbox_agree" type="checkbox" name="checkbox_agree" required/>
+                    <label htmlFor="checkbox_agree">Я хочу получать обновления на почту</label>
+                </div>
+                <button className="orange_button window-auth__orange_button">Регистрация</button>
+                <div className='link-auth'>
+                    <p>Уже есть аккаунт?</p>
+                    <Link to="/login">
+                        <p>Вход</p>
+                    </Link>
+                </div>
+            </div>
+        </div>
+    )
+};
 
-});
+export default Registration;
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
