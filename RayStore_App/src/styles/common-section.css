@@ -1,0 +1,13 @@
+.common__section {
+    background: linear-gradient(rgba(158, 154, 154, 0.555), rgba(104, 104, 104, 0.555)), url(../assets/images/Autorepair.jpg) no-repeat center center;
+    background-size: hover;
+    padding: 100px 0px;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.common__section h1 {
+    color: #fff;
+    font-weight: 600;
+}
