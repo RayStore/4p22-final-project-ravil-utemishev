@@ -1,33 +1,3 @@
-import productImg01 from "../images/Accumulator Dynamic D59.png";
-import productImg02 from "../images/Brake pads PN2466.png";
-import productImg03 from "../images/SKAD Melburn 7х17 ET50.png";
-import productImg04 from "../images/Engine oil 5W-30.png";
-
-import productImg05 from "../images/Night Breaker Laser.png";
-import productImg06 from "../images/Oil-filter Ford 1883037.png";
-import productImg07 from "../images/Remain R162 ET-54.png";
-import productImg08 from "../images/Frizione FR1017.png";
-
-import productImg09 from "../images/X-trike X-120 ET-35.png";
-import productImg10 from "../images/Gearbox-oil 75W-90.png";
-import productImg11 from "../images/КАМА ALGA НК-531.png";
-import productImg12 from "../images/Rolling Jack LAVITA LA FJ-01.png";
-
-import productImg13 from "../images/FM-transmitter.png";
-import productImg14 from "../images/Wax LAVR.png";
-import productImg15 from "../images/Liquid key Grand Caratt.png";
-import productImg16 from "../images/Accumulator 60Ah.png";
-
-import productImg17 from "../images/Oil 0W-20.png";
-import productImg18 from "../images/Bottle Jack.png";
-import productImg19 from "../images/КАМА Irbis.png";
-import productImg20 from "../images/Compressor.png";
-
-import productImg21 from "../images/Compressor new.png";
-import productImg22 from "../images/Extinguisher.png";
-import productImg23 from "../images/Cam Airline.png";
-import productImg24 from "../images/Spark plug.png";
-
 const products = [
 	{
 		name: "Accumulator Dynamic D59",

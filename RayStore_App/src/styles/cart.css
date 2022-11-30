@@ -1,0 +1,17 @@
+.table tr td img {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover;
+} 
+
+
+.basket {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  }
+
+.td, th {
+    color: rgb(163, 216, 183);
+}

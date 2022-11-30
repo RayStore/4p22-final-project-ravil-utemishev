@@ -16,9 +16,9 @@ function ProductCard({ item }) {
 		dispatch(
 			cartActions.addItem({
 				id: item.id,
-				productName: item.name,
-				price: item.cost,
-				image: item.imgUrl
+				name: item.name,
+				cost: item.cost,
+				imgUrl: item.imgUrl
 			})
 		);
 

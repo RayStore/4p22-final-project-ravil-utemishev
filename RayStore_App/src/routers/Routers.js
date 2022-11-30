@@ -7,11 +7,13 @@ import Login from '../pages/Login';
 import Checkout from '../pages/Checkout';
 import Registration from '../pages/Registration';
 import Signup from '../pages/Signup';
+import Catalog from '../pages/Catalog/Catalog';
 
 const Routers = () => {
   return <Routes>
     <Route path='/' element={<Navigate to='home'/>}/>
     <Route path='home' element={<Home/>}/>
+    <Route path='catalog' element={<Catalog/>}/>
     <Route path='shop' element={<Shop/>}/>
     <Route path='shop/:id' element={<ProductDetails/>}/>
     <Route path='cart' element={<Cart/>}/>

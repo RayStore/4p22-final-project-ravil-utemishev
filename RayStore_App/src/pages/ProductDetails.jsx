@@ -6,15 +6,28 @@ import Helmet from "../components/Helmet/Helmet.js";
 import CommonSection from "../components/First/CommonSection";
 import "../styles/product-details.css";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../redux/slices/cartSlice";
+import { toast } from "react-toastify";
+
 
 function ProductDetails() {
+
 	const { id } = useParams();
 	const product = products.find(item => item.id === id);
+	const dispatch = useDispatch()
 
 	const { imgUrl, name, cost, description } = product;
+	
+	const addToCart = () => {
+		dispatch(cartActions.addItem({ id, image: imgUrl, name, cost}));
+	
+		toast.success('Товар успешно добавлен'); 
+	}; 
+	
 	return (
-		<Helmet>
-			<CommonSection />
+		<Helmet title={name}>
+			<CommonSection title={name}/>
 
 			<section className="pt-0">
 				<Container>
@@ -46,7 +59,7 @@ function ProductDetails() {
 
 								<span className="pricepart">{cost}</span>
 								<p>{description}</p>
-								<button className="buy__btn">Добавить в корзину</button>
+								<motion.button whileTap={{scale:1.2}} className="buy__btn" onClick={addToCart}> Добавить в корзину </motion.button>
 							</div>
 						</Col>
 					</Row>

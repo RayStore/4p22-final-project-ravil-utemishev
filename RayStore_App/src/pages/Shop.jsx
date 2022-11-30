@@ -7,7 +7,8 @@ import { Container, Row, Col } from "reactstrap";
 import '../styles/shop.css';
 
 import products from "../assets/data/products";
-import ProductsList from "../components/First/ProductsList"; 
+import ProductsList from "../components/First/ProductsList";
+
 
 function Shop() {
 
@@ -92,10 +93,10 @@ function Shop() {
 			<section>
 				<Container>
 					<Row>
-						<Col lg="3" md="3">
+						<Col lg="3" md="6" className="textwidget">
 							<div className="filter__widget">
 								<select onChange={handleFilter}>
-									<option>Категория</option>
+									<option className="categoty">Категория</option>
 									<option value="Wheels">Диски</option>
 									<option value="Lubricant">Масла</option>
 									<option value="Electro eqipment">Электрооборудование</option>
@@ -109,7 +110,7 @@ function Shop() {
 								</select>
 							</div>
 						</Col>
-						<Col lg="3" md="3">
+						<Col lg="3" md="6" className="text-end">
 							<div className="filter__widget">
 								<select onChange={handleFilter}>
 									<option>Фильтр по:</option>
@@ -118,7 +119,7 @@ function Shop() {
 								</select>
 							</div>
 						</Col>
-						<Col lg="6" md="6">
+						<Col lg="6" md="12">
 							<div className="search__box">
 								<input type="text" placeholder="Поиск..." onChange={handleSearch}/>
 									<span>

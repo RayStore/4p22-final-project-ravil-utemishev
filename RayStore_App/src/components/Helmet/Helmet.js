@@ -2,7 +2,7 @@ import React from 'react'
 
 function Helmet (props) {
   
-  document.title = 'RayStore -' + props.title
+  document.title = 'RayStore autoparts-' + props.title
     return (
     <div className='w-100'>{props.children}</div>
   )
