@@ -1,0 +1,18 @@
+.CommonButton {
+    outline: none;
+    border: none;
+    background: navy;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Merriweather';
+    font-weight: 700;
+    transition: .2s background-color;
+    cursor: pointer;
+}
+
+.CommonButton:hover {
+    background-color: rgba(41, 131, 200, 0.5);
+    transition-delay: 0s;
+    
+}

@@ -1,0 +1,8 @@
+.Catalog-container {
+    display: flex;
+    padding: 20px 100px;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+
+}
