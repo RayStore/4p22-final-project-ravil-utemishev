@@ -1,0 +1,61 @@
+.ri-github-fill {
+	color: #ffffff;
+}
+
+.ri-telegram-fill {
+	color: #36a3ecbe;
+	font-size: 24px;
+}
+
+.footer {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	background: #24282bc7;
+}
+
+.footer__text {
+	line-height: 30px;
+	color: rgb(205, 224, 241);
+}
+
+.footer__quick-links ul li {
+	background: transparent !important;
+}
+
+.footer__quick-links ul li a {
+	color: rgb(205, 224, 241);
+}
+
+.quick__links-tltie {
+	margin-bottom: 20px;
+	color: aliceblue;
+	font-size: 1.1rem;
+}
+
+.footer__contact li {
+	color: aliceblue;
+}
+
+.footer__contact li span,
+.footer__contact li p {
+	font-size: 1.4rem;
+	color: aliceblue;
+}
+
+.websites__callback {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.footer__contact li p {
+    font-size: 0.9rem;
+}
+
+.footer__copyright {
+    color: rgb(205, 224, 241); 
+    margin-top: 50px;
+    text-align: center;   
+}
