@@ -1,5 +1,4 @@
 import "../styles/signup.scss";
-import { Link } from "react-router-dom";
 
 function FormRegistration() {
 	function preventDefault(event) {
@@ -248,15 +247,14 @@ function FormRegistration() {
 						Я согласен получать обновления на почту
 					</label>
 				</div>
-				<Link to="/">
-					<button
-						onClick={event => preventDefault(event)}
-						className="registration-card__button"
-						type="submit"
-					>
-						Регистрация
-					</button>
-				</Link>
+
+				<button
+					onClick={event => preventDefault(event)}
+					className="registration-card__button"
+					type="submit"
+				>
+					Регистрация
+				</button>
 			</form>
 		</div>
 	);
