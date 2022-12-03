@@ -52,9 +52,3 @@ function ProductCard({ item }) {
 }
 
 export default ProductCard;
-
-
-
-//  console.log(state.totalQuantity);
-//  console.log(state.cartItems);
-//  console.log(newItem);

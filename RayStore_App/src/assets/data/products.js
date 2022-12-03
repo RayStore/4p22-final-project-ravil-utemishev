@@ -74,7 +74,7 @@ const products = [
 		id: "8"
 	},
 	{
-		name: "X-trike X-120 ET-35",
+		name: "X'trike X-120 ET-35",
 		imgUrl: "https://cdn3.static1-sima-land.com/items/3058335/0/400.jpg?v=1527325593",
 		cost: 8275,
 		categories: "Wheels",
