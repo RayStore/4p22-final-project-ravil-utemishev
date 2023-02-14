@@ -1,14 +1,13 @@
 import './Card.css';
 // import Button from '../Button/Button';
 
-function Card(props) {
+function Card({img, title, name}) {
     return (
         <div className="Card">
-            <img className="Card-img" src={ props.img } alt="autopart"></img>
+            <img className="Card-img" src={ img } alt="autopart"></img>
             <div className="Card-container">
-                <h2 className="Card-title">{ props.title }</h2>
-                <p className="Card-descriprion">{ props.name }</p>
-                {/* <Button text="Купить"/> */}
+                <h2 className="Card-title">{ title }</h2>
+                <p className="Card-descriprion">{ name }</p>
             </div>
         </div>
         )

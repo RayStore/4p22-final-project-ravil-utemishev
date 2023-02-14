@@ -214,7 +214,7 @@ const products = [
 	},
 	{
 		name: "Sparking plug",
-		imgUrl: "https://www.autocompas.ru/images/_big/81/16557728.webp",
+		imgUrl: "https://www.static.autocompas.ru/images/_big/81/18387866.webp?167352165624394",
 		cost: 70,
 		categories: "Electro eqipment",
 		description:
